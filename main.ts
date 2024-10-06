@@ -84,7 +84,7 @@ namespace dfplayermini {
     export function connect(pinRX: SerialPin = SerialPin.P0, pinTX: SerialPin = SerialPin.P1): void {
         serial.redirect(pinRX, pinTX, BaudRate.BaudRate9600)
         isConnected = true
-        basic.pause(100)
+        basic.pause(3500)
     }
 
     //% blockId="dfplayermini_press" block="press button:%myPlayType"
