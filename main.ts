@@ -66,7 +66,7 @@ namespace dfplayermini {
     function innerCall(CMD: number, para1: number, para2: number): void {
         if (!isConnected) {
             connect(SerialPin.P0, SerialPin.P1)
-            basic.showNuimber(9)
+            basic.showNumber(9)
         }
         dataArr[3] = CMD
         dataArr[5] = para1
