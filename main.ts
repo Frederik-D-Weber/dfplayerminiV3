@@ -1,5 +1,5 @@
 /**
-* DFPlayer Mini
+* DFPlayer Mini v3.0
 * Refer to https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
 */
 
