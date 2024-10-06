@@ -60,12 +60,13 @@ namespace dfplayermini {
             myBuf.setNumber(NumberFormat.UInt8BE, i, dataArr[i])
         }
         serial.writeBuffer(myBuf)
-        basic.pause(100)
+        basic.pause(200)
     }
 
     function innerCall(CMD: number, para1: number, para2: number): void {
         if (!isConnected) {
             connect(SerialPin.P0, SerialPin.P1)
+            basic.show(9)
         }
         dataArr[3] = CMD
         dataArr[5] = para1
