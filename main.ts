@@ -44,6 +44,12 @@ namespace dfplayermini {
         Yes = 1
     }
 
+    export enum isVersion3 {
+        //% block="No"
+        No = false,
+        //% block="Yes"
+        Yes = true
+    }
     function checkSum(): void {
         let total = 0;
         for (let i = 1; i < 7; i++) {
@@ -82,10 +88,10 @@ namespace dfplayermini {
      */
     //% blockId="dfplayermini_connect" block="connect to DFPlayer mini, RX:%pinRX|TX:%pinTX"
     //% weight=100 blockGap=20
-    export function connect(pinRX: SerialPin = SerialPin.P0, pinTX: SerialPin = SerialPin.P1, isV3: boolean = false): void {
+    export function connect(pinRX: SerialPin = SerialPin.P0, pinTX: SerialPin = SerialPin.P1, setIsV3: isVersion3): void {
         serial.redirect(pinRX, pinTX, BaudRate.BaudRate9600)
         isConnected = true
-        if (isV3) {
+        if (setIsV3) {
             basic.pause(3500)
         } else {
             basic.pause(100)
