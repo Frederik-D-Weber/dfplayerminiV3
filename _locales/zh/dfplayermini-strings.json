@@ -13,7 +13,7 @@
     "dfplayermini.EQ.Base|block": "基本",
     "dfplayermini.setRepeat.No|block": "否",
     "dfplayermini.setRepeat.Yes|block": "是",
-    "dfplayermini.connect|block": "连接DFPlayer mini， RX引脚：%pinRX|TX引脚：%pinTX",
+    "dfplayermini.connect|block": "连接DFPlayer mini， RX引脚：%pinRX|TX引脚：%pinTX|isV3: % isV3",
     "dfplayermini.press|block": "按下：%myPlayType",
     "dfplayermini.playFile|block": "指定播放歌曲，第%fileNumber|首，重复播放：%setRepeat",
     "dfplayermini.playFileInFolder|block": "指定播放文件夹中歌曲，文件夹编号：%folderNumber|文件：%fileNumber|　重复播放：%setRepeat",
