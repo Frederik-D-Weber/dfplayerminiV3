@@ -3,7 +3,7 @@
 * Refer to https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
 */
 
-//% weight=9 color=#666699 icon="\uf001" block="DFPlayer Mini"
+//% weight=9 color=#666699 icon="\uf001" block="DFPlayer Mini V3"
 namespace dfplayermini {
     /* [$S,VER,Len,CMD,Feedback,para1,para2,checksum,$0] */
     let dataArr: number[] = [0x7E, 0xFF, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xEF]
@@ -45,9 +45,9 @@ namespace dfplayermini {
     }
 
     export enum isVersion3 {
-        //% block="No"
+        //% block="V2"
         No = 0,
-        //% block="Yes"
+        //% block="V3"
         Yes = 1
     }
     
@@ -86,8 +86,9 @@ namespace dfplayermini {
      * Connect DFPlayer Mini
      * @param pinRX RX Pin, eg: SerialPin.P0
      * @param pinTX TX Pin, eg: SerialPin.P1
+     * @param isV3, eg: V3
      */
-    //% blockId="dfplayermini_connect" block="connect to DFPlayer mini, RX:%pinRX|TX:%pinTX"
+    //% blockId="dfplayermini_connect" block="connect to DFPlayer mini RX:%pinRX|TX:%pinTX|isV3:%setIsV3"
     //% weight=100 blockGap=20
     export function connect(pinRX: SerialPin = SerialPin.P0, pinTX: SerialPin = SerialPin.P1, setIsV3: isVersion3): void {
         serial.redirect(pinRX, pinTX, BaudRate.BaudRate9600)
