@@ -46,9 +46,9 @@ namespace dfplayermini {
 
     export enum isVersion3 {
         //% block="No"
-        No = false,
+        No = 0,
         //% block="Yes"
-        Yes = true
+        Yes = 1
     }
     function checkSum(): void {
         let total = 0;
@@ -71,7 +71,7 @@ namespace dfplayermini {
 
     function innerCall(CMD: number, para1: number, para2: number): void {
         if (!isConnected) {
-            connect(SerialPin.P0, SerialPin.P1)
+            connect(SerialPin.P0, SerialPin.P1, 0)
             basic.showNumber(9)
         }
         dataArr[3] = CMD
@@ -91,10 +91,10 @@ namespace dfplayermini {
     export function connect(pinRX: SerialPin = SerialPin.P0, pinTX: SerialPin = SerialPin.P1, setIsV3: isVersion3): void {
         serial.redirect(pinRX, pinTX, BaudRate.BaudRate9600)
         isConnected = true
-        if (setIsV3) {
-            basic.pause(3500)
-        } else {
+        if (setIsV3 == 0) {
             basic.pause(100)
+        } else {
+            basic.pause(3500)
         }
     }
 
