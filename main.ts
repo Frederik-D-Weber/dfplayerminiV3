@@ -83,7 +83,7 @@ namespace dfplayermini {
     }
 
     /**
-     * Connect DFPlayer Mini
+     * Connect DFPlayer Mini V3
      * @param pinRX RX Pin, eg: SerialPin.P0
      * @param pinTX TX Pin, eg: SerialPin.P1
      * @param isV3, eg: V3
