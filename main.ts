@@ -50,6 +50,7 @@ namespace dfplayermini {
         //% block="Yes"
         Yes = 1
     }
+    
     function checkSum(): void {
         let total = 0;
         for (let i = 1; i < 7; i++) {
